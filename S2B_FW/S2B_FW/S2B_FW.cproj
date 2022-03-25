@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATxmega32D4</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>S2B_FW</AssemblyName>
+    <Name>S2B_FW</Name>
+    <RootNamespace>S2B_FW</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <avrtool>com.atmel.avrdbg.tool.pickit4</avrtool>
+    <avrtoolserialnumber>BUR212472548</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E9542</avrdeviceexpectedsignature>
+    <avrtoolinterface>PDI</avrtoolinterface>
+    <com_atmel_avrdbg_tool_pickit4>
+      <ToolOptions>
+        <InterfaceProperties>
+          <PdiClock>4000000</PdiClock>
+        </InterfaceProperties>
+        <InterfaceName>PDI</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.pickit4</ToolType>
+      <ToolNumber>BUR212472548</ToolNumber>
+      <ToolName>MPLAB® PICkit 4</ToolName>
+    </com_atmel_avrdbg_tool_pickit4>
+    <avrtoolinterfaceclock>4000000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atxmega32d4 -B "%24(PackRepoDir)\atmel\XMEGAD_DFP\1.2.120\gcc\dev\atxmega32d4"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\XMEGAD_DFP\1.2.120\include\</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\XMEGAD_DFP\1.2.120\include\</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+  <avrgcc.common.Device>-mmcu=atxmega32d4 -B "%24(PackRepoDir)\atmel\XMEGAD_DFP\1.2.120\gcc\dev\atxmega32d4"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>DEBUG</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\XMEGAD_DFP\1.2.120\include\</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcc.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcc.linker.libraries.Libraries>
+  <avrgcc.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\XMEGAD_DFP\1.2.120\include\</Value>
+    </ListValues>
+  </avrgcc.assembler.general.IncludePaths>
+  <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+</AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Middleware\ParamXchanger.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Middleware\ParamXchanger.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Middleware\Structs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Middleware\SysExProcessor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Middleware\SysExProcessor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Middleware\VoiceAssigner.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Middleware\VoiceAssigner.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MIDI\MIDIParser.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MIDI\MIDIParser.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MIDI\Structs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Serial\ringbuff.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Serial\SerialCtrl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Serial\SerialCtrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Serial\xprintf.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Serial\xprintf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\BusCtrl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\BusCtrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\CommonStructs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\FMCtrl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\FMCtrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\RegCtrl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\RegCtrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\RhythmCtrl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\RhythmCtrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\ScaleXform.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\ScaleXform.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\SSGCtrl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\SSGCtrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\TimbreMgr.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\TimbreMgr.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\YMF288.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="YMF288\YMF288.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MIDI" />
+    <Folder Include="Middleware" />
+    <Folder Include="Serial" />
+    <Folder Include="YMF288" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
